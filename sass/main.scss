@@ -1,5 +1,7 @@
 @use "./abstracts/index.scss" as *;
-
+html {
+  height: 100%;
+}
 body {
   @include basic-settings;
   font-family: $text-font;
@@ -127,7 +129,7 @@ h1 {
 .restaurant {
   width: 95%;
   margin: auto;
-  padding: 1.5rem 0;
+  padding: 1rem 0 3rem 0;
 }
 
 .cards-box {
@@ -182,4 +184,24 @@ h1 {
 .card__info-and-heart i {
   align-self: center;
   font-size: 1.7rem;
+}
+
+/*footer*/
+footer {
+  background-color: $black;
+  color: white;
+  padding: 1rem;
+}
+
+footer h3 {
+  font-family: $title-font;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.8rem;
 }

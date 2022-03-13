@@ -2,6 +2,10 @@
 /*font*/
 /*box shadow*/
 /*font weight*/
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -140,7 +144,7 @@ h1 {
 .restaurant {
   width: 95%;
   margin: auto;
-  padding: 1.5rem 0;
+  padding: 1rem 0 3rem 0;
 }
 
 .cards-box {
@@ -195,6 +199,26 @@ h1 {
 .card__info-and-heart i {
   align-self: center;
   font-size: 1.7rem;
+}
+
+/*footer*/
+footer {
+  background-color: #363636;
+  color: white;
+  padding: 1rem;
+}
+
+footer h3 {
+  font-family: "Shrikhand";
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
