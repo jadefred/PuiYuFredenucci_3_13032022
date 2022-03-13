@@ -67,6 +67,11 @@ h1 {
 }
 
 .fonction h2 {
+  width: 95%;
+  margin: 0 auto 1rem auto;
+}
+
+.fonction h2 {
   margin-top: 0;
 }
 
@@ -90,6 +95,7 @@ h1 {
   padding: 0.3rem 0.65rem;
   border-radius: 50%;
   transform: scale(0.7);
+  margin: 0;
 }
 
 .fonction li {
@@ -115,4 +121,65 @@ h1 {
 .fonction i {
   margin-right: 1rem;
   color: rgba($color: #000000, $alpha: 0.6);
+}
+
+/*restaurants*/
+.restaurant {
+  width: 95%;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+
+.cards-box {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__new-tag {
+  position: absolute;
+  background-color: $tertiaire-color;
+  padding: 0.6rem;
+  font-weight: map-get($map: $font-weights, $key: medium);
+  color: darken($color: $tertiaire-color, $amount: 50%);
+  right: 15px;
+  top: 15px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card__info-and-heart {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border-radius: 0 0 15px 15px;
+}
+
+.card__info-and-heart h3 {
+  margin: 0;
+}
+
+.card__info-and-heart p {
+  margin: 0.5rem 0 0 0;
+  font-weight: map-get($map: $font-weights, $key: light);
+}
+
+.card__info-and-heart i {
+  align-self: center;
+  font-size: 1.7rem;
 }
