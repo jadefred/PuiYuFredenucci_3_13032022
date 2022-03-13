@@ -1,0 +1,19 @@
+{
+  "name": "p3_fredenucci_puiyu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadefred/PuiYuFredenucci_3_13032022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadefred/PuiYuFredenucci_3_13032022/issues"
+  },
+  "homepage": "https://github.com/jadefred/PuiYuFredenucci_3_13032022#readme"
+}

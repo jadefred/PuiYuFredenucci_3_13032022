@@ -1,0 +1,118 @@
+@use "./abstracts/index.scss" as *;
+
+body {
+  @include basic-settings;
+  font-family: $text-font;
+  background-color: $light-grey;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*header*/
+h1 {
+  font-family: $title-font;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 0.9rem;
+  background: $grey;
+  box-shadow: $inset;
+}
+
+.location i,
+.location p {
+  margin: 0;
+}
+
+.location i {
+  margin-right: 1rem;
+}
+
+/*introduction and explore button*/
+.intro {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 0.8rem;
+}
+
+.intro p {
+  font-weight: map-get($map: $font-weights, $key: light);
+}
+
+.intro button {
+  text-align: center;
+  @include button;
+}
+
+.intro button:hover {
+  @include button-hover;
+}
+
+/*fonctions*/
+.fonction {
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.fonction h2 {
+  margin-top: 0;
+}
+
+.fonction ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 0;
+  width: 90%;
+  margin: auto;
+}
+
+.fonction__num {
+  position: absolute;
+  left: -1rem;
+  top: 0.6rem;
+  background-color: $primaire-color;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 50%;
+  transform: scale(0.7);
+}
+
+.fonction li {
+  position: relative;
+  background-color: $light-grey;
+  padding: 1rem 2rem;
+  width: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: $normal;
+}
+
+.fonction li:hover {
+  background-color: rgba($color: $primaire-color, $alpha: 0.2);
+  transition: all 300ms ease;
+}
+
+.fonction li:hover i {
+  color: $primaire-color;
+  transition: all 500ms ease;
+}
+
+.fonction i {
+  margin-right: 1rem;
+  color: rgba($color: #000000, $alpha: 0.6);
+}

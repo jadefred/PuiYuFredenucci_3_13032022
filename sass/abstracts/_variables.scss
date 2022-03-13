@@ -1,0 +1,22 @@
+/*colors*/
+$primaire-color: #9356dc;
+$secondaire-color: #ff79da;
+$tertiaire-color: #99e2d0;
+$grey: #e6e3e3;
+$light-grey: #f2f2f2;
+
+/*font*/
+$title-font: "Shrikhand";
+$text-font: "Roboto";
+
+/*box shadow*/
+$inset: inset 0px 5px 3px -1px rgba(0, 0, 0, 0.1);
+$normal: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+
+/*font weight*/
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
