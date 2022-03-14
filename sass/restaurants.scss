@@ -93,11 +93,11 @@ main {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
   row-gap: 2rem;
 
   @include desktop {
     width: 95%;
+    max-width: 1800px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     column-gap: 2rem;
@@ -108,6 +108,7 @@ main {
   text-transform: uppercase;
   font-weight: map-get($map: $font-weights, $key: light);
   position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .card h3::after {
@@ -121,23 +122,26 @@ main {
 }
 
 .card--all-choices {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   row-gap: 1rem;
+  width: 100%;
 }
 
 .card__detiles {
   display: flex;
   justify-content: space-between;
-  column-gap: 1rem;
   background-color: white;
   box-shadow: $normal;
   border-radius: 15px;
   position: relative;
-  overflow: hidden;
   align-items: center;
   padding: 0.7rem;
   cursor: pointer;
+}
+
+.card__food {
+  width: 80%;
 }
 
 .card__food,
@@ -233,32 +237,12 @@ main {
     transform: translateY(0px);
   }
 }
-#card1 {
-  animation-delay: 0s;
-}
-#card2 {
-  animation-delay: 0.2s;
-}
-#card3 {
-  animation-delay: 0.4s;
-}
-#card4 {
-  animation-delay: 0.6s;
-}
-#card5 {
-  animation-delay: 0.8s;
-}
-#card6 {
-  animation-delay: 1s;
-}
-#card7 {
-  animation-delay: 1.2s;
-}
-#card8 {
-  animation-delay: 1.4s;
-}
-#card9 {
-  animation-delay: 1.6s;
+
+/*function to calcuate display animation delay time for each card details*/
+@for $i from 1 through 10 {
+  #card-#{$i} {
+    animation-delay: (($i - 1) * 2 / 10) + s;
+  }
 }
 
 /*button*/
@@ -275,6 +259,10 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include desktop {
+    margin: 3rem 0;
+  }
 }
 
 /*footer*/
@@ -287,20 +275,17 @@ footer {
 footer h3 {
   font-family: $title-font;
   font-size: 24px;
-
-  @include desktop {
-    width: 95%;
-    margin: 1rem auto;
-  }
+  width: 95%;
+  margin: 1rem auto;
 }
 
 footer ul {
   list-style: none;
   padding: 0;
+  width: 95%;
+  margin: 2rem auto 1rem auto;
 
-  @include desktop {
-    width: 95%;
-    margin: 2rem auto;
+  @include tablet {
     display: flex;
     column-gap: 5rem;
   }
@@ -309,7 +294,7 @@ footer ul {
 footer li {
   margin-bottom: 0.8rem;
 
-  @include desktop {
+  @include tablet {
     margin: 0;
   }
 }
