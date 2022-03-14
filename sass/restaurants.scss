@@ -28,14 +28,22 @@ h1 {
 header i {
   position: absolute;
   font-size: 23px;
-  left: 1rem;
+  left: 5%;
   top: 0.8rem;
+
+  @include desktop {
+    left: 2.5%;
+  }
 }
 
 /*banner image*/
 .banner {
   width: 100%;
   height: 14rem;
+
+  @include desktop {
+    height: 18rem;
+  }
 }
 
 .banner img {
@@ -50,6 +58,11 @@ main {
   top: -3rem;
   background-color: $light-grey;
   border-radius: 30px;
+
+  @include desktop {
+    position: static;
+    border-radius: 0;
+  }
 }
 
 .name-and-heart {
@@ -59,6 +72,10 @@ main {
   width: 90%;
   margin: auto;
   padding-top: 1.5rem;
+
+  @include desktop {
+    width: 95%;
+  }
 }
 
 .name-and-heart h2 {
@@ -74,9 +91,17 @@ main {
 .menu {
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 2rem;
+
+  @include desktop {
+    width: 95%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+  }
 }
 
 .card h3 {
@@ -196,40 +221,95 @@ main {
 
 /*menu display animation*/
 .card--display-animation {
-  animation: appear 3s 1 both ease;
+  animation: appear 1.5s 1 both ease;
 }
 @keyframes appear {
   0% {
     opacity: 0;
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 #card1 {
   animation-delay: 0s;
 }
 #card2 {
-  animation-delay: 0.1s;
-}
-#card3 {
   animation-delay: 0.2s;
 }
-#card4 {
-  animation-delay: 0.3s;
-}
-#card5 {
+#card3 {
   animation-delay: 0.4s;
 }
-#card6 {
-  animation-delay: 0.5s;
-}
-#card7 {
+#card4 {
   animation-delay: 0.6s;
 }
+#card5 {
+  animation-delay: 0.8s;
+}
+#card6 {
+  animation-delay: 1s;
+}
+#card7 {
+  animation-delay: 1.2s;
+}
 #card8 {
-  animation-delay: 0.7s;
+  animation-delay: 1.4s;
 }
 #card9 {
-  animation-delay: 0.8s;
+  animation-delay: 1.6s;
+}
+
+/*button*/
+button {
+  @include button;
+}
+
+button:hover {
+  @include button-hover;
+}
+
+.button-box {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*footer*/
+footer {
+  background-color: $black;
+  color: white;
+  padding: 1rem;
+}
+
+footer h3 {
+  font-family: $title-font;
+  font-size: 24px;
+
+  @include desktop {
+    width: 95%;
+    margin: 1rem auto;
+  }
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+
+  @include desktop {
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    column-gap: 5rem;
+  }
+}
+
+footer li {
+  margin-bottom: 0.8rem;
+
+  @include desktop {
+    margin: 0;
+  }
 }
