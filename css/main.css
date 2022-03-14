@@ -2,6 +2,8 @@
 /*font*/
 /*box shadow*/
 /*font weight*/
+/*button and hover*/
+/*media query*/
 html {
   height: 100%;
 }
@@ -156,6 +158,14 @@ h1 {
   width: 90%;
   margin: auto;
 }
+@media (min-width: 1024px) {
+  .fonction ul {
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 3rem;
+  }
+}
 
 .fonction__num {
   position: absolute;
@@ -178,6 +188,11 @@ h1 {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 1024px) {
+  .fonction li {
+    flex-grow: 1;
+  }
 }
 
 .fonction li:hover {
@@ -206,6 +221,16 @@ h1 {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   row-gap: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .cards-box {
+    width: 85%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 1rem;
+  }
 }
 
 .card {
@@ -277,15 +302,35 @@ footer {
 
 footer h3 {
   font-family: "Shrikhand";
+  font-size: 24px;
+}
+@media (min-width: 1024px) {
+  footer h3 {
+    width: 95%;
+    margin: 1rem auto;
+  }
 }
 
 footer ul {
   list-style: none;
   padding: 0;
 }
+@media (min-width: 1024px) {
+  footer ul {
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    column-gap: 5rem;
+  }
+}
 
 footer li {
   margin-bottom: 0.8rem;
+}
+@media (min-width: 1024px) {
+  footer li {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
