@@ -199,4 +199,53 @@ main {
   transition: 500ms ease-out;
 }
 
+/*menu display animation*/
+.card--display-animation {
+  animation: appear 3s 1 both ease;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#card1 {
+  animation-delay: 0s;
+}
+
+#card2 {
+  animation-delay: 0.1s;
+}
+
+#card3 {
+  animation-delay: 0.2s;
+}
+
+#card4 {
+  animation-delay: 0.3s;
+}
+
+#card5 {
+  animation-delay: 0.4s;
+}
+
+#card6 {
+  animation-delay: 0.5s;
+}
+
+#card7 {
+  animation-delay: 0.6s;
+}
+
+#card8 {
+  animation-delay: 0.7s;
+}
+
+#card9 {
+  animation-delay: 0.8s;
+}
+
 /*# sourceMappingURL=restaurants.css.map */
